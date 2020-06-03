@@ -121,9 +121,31 @@ function AddTask(taskInfo) {
 
 
 
+function GetUsers(filters, offset, limit) {
+    if (Object.keys(filters).length == 0) {
+        return models.user.findAndCountAll().then((users) => users)
+            .catch((err) => {
+                throw Error(err.message)
+            })
+    } else {
+        return models.user.findAll({
+                limit: limit,
+                offset: offset,
+                where: {
+                    ...filters
+                }
+            }).then((users) => users)
+            .catch((err) => {
+                throw Error(err.message)
+            })
+    }
+
+}
+
 
 export default {
     AddUserToDatabase: AddUserToDatabase,
     AddProject: AddProject,
-    AddTask: AddTask
+    AddTask: AddTask,
+    GetUsers: GetUsers
 }
