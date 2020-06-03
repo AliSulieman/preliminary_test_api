@@ -16,6 +16,8 @@ export default (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             unique: false,
         },
+    }, {
+        timestamps: false
     });
 
     return task

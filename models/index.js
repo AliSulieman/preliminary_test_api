@@ -1,5 +1,4 @@
-import Sequelize from "sequelize";
-
+const Sequelize = require('sequelize').Sequelize;
 //Create instance of our database
 const sequelize = new Sequelize("preliminary", "postgres", "krombo", {
     dialect: "postgres",
@@ -24,5 +23,6 @@ Object.keys(models).forEach((modelName) => {
 //Assign sequalize to the database instance
 models.sequelize = sequelize;
 models.Sequelize = Sequelize;
+
 
 export default models;

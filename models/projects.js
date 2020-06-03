@@ -12,6 +12,8 @@ export default (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             unique: false,
         },
+    }, {
+        timestamps: false
     });
     project.associate = (models) => {
         project.hasMany(models.task, {
