@@ -1,6 +1,7 @@
 # preliminary_test_api
 Test for internship interview
-how to run my code 
-  1. Clone my repo
-  2. npm install 
-  3. npm start 
+To run the code 
+1. Create a postgres database and name it "preliminary"
+2. The username must be "postgres" and the password: "krombo"
+3. on the command line type "npm install"
+4. on the command line "npm start"
