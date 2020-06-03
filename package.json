@@ -1,0 +1,33 @@
+{
+  "name": "preliminary_api",
+  "version": "1.0.0",
+  "description": "Preliminary Test for internship interview",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "babel app.js -d dist",
+    "start": "nodemon --exec babel-node app.js "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AliSulieman/preliminary_test_api.git"
+  },
+  "author": "Ali Sulieman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AliSulieman/preliminary_test_api/issues"
+  },
+  "homepage": "https://github.com/AliSulieman/preliminary_test_api#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^8.2.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.11"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "nodemon": "^2.0.4"
+  }
+}
